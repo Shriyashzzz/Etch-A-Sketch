@@ -17,7 +17,7 @@ askUserSquaresBtn.addEventListener('click',userPromptGrid)
 mainContainer.before(btnContainer);
 
 let resetBtn = document.createElement("button");
-resetBtn.textContent = "Reset Grid"
+resetBtn.textContent = "Clear Grid"
 resetBtn.classList.add('Button');
 btnContainer.appendChild(resetBtn);
 let gridSize =16;
