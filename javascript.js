@@ -50,7 +50,6 @@ function userPromptGrid(){
         makeGrid(usergivenSquares);
         appendSquareVals()
         
-
     }else{
         return userPromptGrid();
     }
@@ -59,11 +58,24 @@ function userPromptGrid(){
 function makeGrid(givenSquare =16){
     const mainContainer = document.querySelector(".mainContainer")
     mainContainer.replaceChildren();
+    let opacity = 0.1;
     for(let i =0; i <(givenSquare*givenSquare);i++){
-    const square = document.createElement("div")
-    square.classList.add("square")
-    square.addEventListener('mouseenter', () =>{  
-        square.style.backgroundColor = getRandomColor();
+        const square = document.createElement("div")
+        square.classList.add("square")
+        
+        square.addEventListener('mouseenter', () =>{  
+            if(opacity<=1){
+                square.style.backgroundColor = getRandomColor();
+                square.style.opacity = opacity;
+                console.log(opacity);
+                opacity = +(opacity + 0.1).toFixed(1)
+            }else{
+                square.style.opacity = opacity;
+                square.style.backgroundColor = getRandomColor()
+                
+            }
+        
+        
     })
     mainContainer.appendChild(square)
     }
