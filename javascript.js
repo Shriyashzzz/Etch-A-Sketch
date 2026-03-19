@@ -47,7 +47,7 @@ rainBowToggleButton.addEventListener('click', ()=>{
         rainBowToggleButton.style.color = "#36494E"
         rainbow = false;
         rainBowToggleButton.textContent = "Black"
-        re
+
     }
     return;
 })
