@@ -63,7 +63,7 @@ function makeGrid(givenSquare =16){
     const square = document.createElement("div")
     square.classList.add("square")
     square.addEventListener('mouseenter', () =>{  
-        square.style.backgroundColor = "#36494E";
+        square.style.backgroundColor = getRandomColor();
     })
     mainContainer.appendChild(square)
     }
@@ -76,4 +76,10 @@ function appendSquareVals(){
             square.style.height = `${(672 / usergivenSquares)}px`
             square.style.width = `${(672 / usergivenSquares)}px`
         })
+}
+
+
+function getRandomColor(){
+    const n = Math.floor(Math.random() * 0xffffff).toString(16);
+    return '#' + n.padStart(6, '0'); 
 }
