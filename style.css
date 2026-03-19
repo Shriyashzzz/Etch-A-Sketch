@@ -137,3 +137,8 @@ body{
   display:flex;
   align-items: center;
 }
+
+p.para{
+  display:flex;
+  justify-content: center;
+}

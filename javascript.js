@@ -34,6 +34,23 @@ gridSizeText.textContent = '16 X 16';
 gridSizeText.style.fontSize = "20px"
 mainContainer.before(gridSizeText);
 
+let rainBowToggleButton = document.querySelector(".button-92")
+let rainbow = false;
+
+rainBowToggleButton.addEventListener('click', ()=>{
+    if(rainbow == false){
+        rainBowToggleButton.style.color = "#1B998B"
+        rainbow =true;
+        rainBowToggleButton.textContent = "Rainbow"
+        
+    }else{
+        rainBowToggleButton.style.color = "#36494E"
+        rainbow = false;
+        rainBowToggleButton.textContent = "Black"
+        re
+    }
+    return;
+})
 
 
 
@@ -51,6 +68,7 @@ function userPromptGrid(){
         appendSquareVals()
         
     }else{
+        alert("Please choose the grid between 0 to 100 ;)")
         return userPromptGrid();
     }
 }
@@ -64,14 +82,24 @@ function makeGrid(givenSquare =16){
         square.classList.add("square")
         
         square.addEventListener('mouseenter', () =>{  
-            if(opacity<=1){
-                square.style.backgroundColor = getRandomColor();
+         opacity: if(opacity<=1){
+                if (rainbow){
+                    square.style.backgroundColor = getRandomColor();
+                }else{
+                     square.style.backgroundColor = "black";
+                }
+                
                 square.style.opacity = opacity;
                 console.log(opacity);
                 opacity = +(opacity + 0.1).toFixed(1)
             }else{
                 square.style.opacity = opacity;
-                square.style.backgroundColor = getRandomColor()
+               if (rainbow){
+                    square.style.backgroundColor = getRandomColor();
+                }else{
+                     square.style.backgroundColor = "black";
+                }
+                
                 
             }
         
