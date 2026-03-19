@@ -2,11 +2,12 @@
 body{
     margin:0px;
     padding: 0px;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #A9CEF4;
 }
 
 .square{
@@ -18,10 +19,11 @@ body{
 }
 
 .mainContainer{
-    color : 1px solid black;
+    color : 1px solid 36494E;
     display :flex;
     flex-direction: row;
     flex-wrap: wrap;
+    flex : 1;
     height : 672px;
     width: 672px;
 
@@ -64,3 +66,19 @@ body{
   color: #fff;
 }
 
+
+.footer{
+    background-color : #597081;
+    padding:20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    min-width: 100vw;
+    text-align: center;
+    color : white;
+}
+
+.footer a:any-link{
+  text-decoration: none;
+  color: #f2f2f2;
+}
