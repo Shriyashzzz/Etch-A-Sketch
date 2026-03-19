@@ -20,7 +20,7 @@ let resetBtn = document.createElement("button");
 resetBtn.textContent = "Reset Grid"
 resetBtn.classList.add('Button');
 btnContainer.appendChild(resetBtn);
-let gridSize ;
+let gridSize =16;
 resetBtn.addEventListener('click',()=>{
     makeGrid(+gridSize)
     appendSquareVals()
